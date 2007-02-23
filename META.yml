@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:                Devel-LeakTrace-Fast
-version:             0.0.2
+version:             0.0.3
 abstract:            indicate where leaked variables are coming from.
-license:             ~
-generated_by:        ExtUtils::MakeMaker version 6.31
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.32
 distribution_type:   module
 requires:     
     Test::More:                    0

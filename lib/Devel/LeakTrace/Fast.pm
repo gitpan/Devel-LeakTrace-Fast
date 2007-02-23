@@ -7,17 +7,17 @@ use warnings;
 use base 'DynaLoader';
 
 BEGIN {
-    our $VERSION = '0.0.2';
+    our $VERSION = '0.0.3';
     bootstrap Devel::LeakTrace::Fast $VERSION;
-    hook_runops();
+    _hook_runops();
 }
 
 INIT {
-    reset_counters();
+    _reset_counters();
 }
 
 END {
-    show_used();
+    _show_used();
 }
 
 1;
@@ -66,12 +66,12 @@ Originally based on code by Richard Clamp that carried this attribution:
 Richard Clamp <richardc@unixbeard.net> with portions of LeakTrace.xs
 taken from Nick Ing-Simmons' Devel::Leak module.
 
-=head1 COPYRIGHT
+=head1 LICENCE AND COPYRIGHT
 
-Copyright (C) 2007 Andy Armstrong. All Rights Reserved.
+Copyright (c) 2007, Andy Armstrong C<< <andy@hexten.net> >>. All rights reserved.
 
-This module is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself. See L<perlartistic>.
 
 =head1 SEE ALSO
 
